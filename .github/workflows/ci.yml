@@ -74,9 +74,8 @@ jobs:
         id: auth
         name: Authenticate to GCP
         with:
-          credentials_json: '${{ secrets.GOOGLE_CREDENTIALS }}'
           project_id: 'cs1660proj2' # update with your project ID
-          # workload_identity_provider: 'projects/739970818234/locations/global/workloadIdentityPools/github/providers/my-github-repo-provider' # update with your Workload Identity Pool
+          workload_identity_provider: 'projects/739970818234/locations/global/workloadIdentityPools/github/providers/my-github-repo-provider' # update with your Workload Identity Pool
 
       # configure/login with docker
       - name: gcloud Configure Docker
@@ -95,4 +94,4 @@ jobs:
           context: ./
           file: ./Dockerfile
           push: true
-          tags: us-central1-docker.pkg.dev/cc-spring2025/dansc0de/fastapi-server:v2
+          tags: us-central1-docker.pkg.dev/cs1660proj2/mja129-1660-proj2
