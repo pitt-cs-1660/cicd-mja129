@@ -76,6 +76,7 @@ jobs:
         with:
           project_id: 'cs1660proj2' # update with your project ID
           workload_identity_provider: 'projects/739970818234/locations/global/workloadIdentityPools/github/providers/my-github-repo-provider' # update with your Workload Identity Pool
+          service_account: 'proj2-service-acct@cs1660proj2.iam.gserviceaccount.com'
 
       # configure/login with docker
       - name: gcloud Configure Docker
